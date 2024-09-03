@@ -1,0 +1,16 @@
+{
+  "version": "2.2.0",
+  "summary": {
+    "title": "Security opdracht",
+    "owner": "Ibrahim - 1068080",
+    "description": "Flask web applicatie",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "Diederik",
+    "threatTop": 0
+  }
+}
