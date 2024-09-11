@@ -44,7 +44,12 @@ cursor.execute('''
 conn.commit()
 conn.close()
 
-@app.route('/')
+import loggi
+
+
+
+
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -61,8 +66,10 @@ def login():
             session['display_name'] = display_name
             session['teacher_id'] = user[0]
             session['is_admin'] = user[5]
+            logging.info(f"Successful login attempt for user: {email}")
             return redirect(url_for('notities'))
         else:
+            logging.warning(f"Failed login attempt for user: {email}")
             return "Login Failed"
     return render_template('Homepage.html')
 
