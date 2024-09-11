@@ -27,14 +27,14 @@
               </span>
                         </a>
                     </li>
+                    {% if session['is_authenticated'] %}
                     {% if session['is_admin'] %}
                     <li class="nav__menu-item menu-item menu-depth-1">
                         <a class="nav__menu-item-link" href='/admin_pagina'>
-              <span>
-                admin
-              </span>
+                            <span>admin</span>
                         </a>
                     </li>
+                    {% endif %}
                     {% endif %}
                 </ul>
             </div>
