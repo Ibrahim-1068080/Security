@@ -124,6 +124,7 @@ def add_teacher():
         return redirect(url_for('admin_pagina'))
 
 
+
 @app.route('/notities')
 def notities():
     if 'teacher_id' not in session:
